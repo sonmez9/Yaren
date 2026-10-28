@@ -1,0 +1,171 @@
+/* ==========================================================================
+   Sayfa düzeni: container, bölümler, header, hero, hikâye, kahveler,
+   iletişim ve footer
+   ========================================================================== */
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+.section {
+  padding-block: var(--section-pad);
+}
+
+.section--alt {
+  background-color: var(--color-cream-dark);
+}
+
+.section__header {
+  margin-bottom: var(--space-12);
+  text-align: center;
+}
+
+/* "İçeriğe geç" linki: sadece klavye odağı aldığında görünür */
+.skip-link {
+  position: absolute;
+  top: var(--space-2);
+  left: var(--space-2);
+  z-index: 200;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-cream);
+  color: var(--color-coffee);
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   Header ve navigasyon
+   Koyu yarı saydam zemin hem hero fotoğrafı hem krem bölümler üstünde okunur.
+   -------------------------------------------------------------------------- */
+
+.site-header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 100;
+  height: var(--header-height);
+  background-color: rgb(59 42 32 / 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--color-cream);
+  transition: background-color var(--transition), box-shadow var(--transition);
+}
+
+/* js/main.js sayfa kayınca bu sınıfı ekler */
+.site-header.is-scrolled {
+  background-color: rgb(59 42 32 / 0.97);
+  box-shadow: var(--shadow-soft);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* Hamburger butonu: tek çubuk + ::before / ::after ile 3 çizgi */
+.nav-toggle {
+  position: relative;
+  width: 2.75rem;  /* dokunma hedefi en az 44px */
+  height: 2.75rem;
+  border: 0;
+  background: none;
+}
+
+.nav-toggle__bar,
+.nav-toggle__bar::before,
+.nav-toggle__bar::after {
+  position: absolute;
+  left: 50%;
+  width: 1.5rem;
+  height: 2px;
+  border-radius: 2px;
+  background-color: currentColor;
+  transform: translateX(-50%);
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+.nav-toggle__bar { top: 50%; margin-top: -1px; }
+.nav-toggle__bar::before { content: ""; top: -7px; left: 50%; }
+.nav-toggle__bar::after  { content: ""; top: 7px;  left: 50%; }
+
+/* Açıkken çarpı işaretine dönüşür */
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar { background-color: transparent; }
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar::before { transform: translateX(-50%) translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar::after  { transform: translateX(-50%) translateY(-7px) rotate(-45deg); }
+
+/* Mobil menü: header'ın altında açılan panel */
+.site-nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: var(--space-4) var(--container-pad) var(--space-8);
+  background-color: rgb(59 42 32 / 0.97);
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-0.5rem);
+  transition: opacity var(--transition), transform var(--transition), visibility var(--transition);
+}
+
+.nav-toggle[aria-expanded="true"] + .site-nav {
+  visibility: visible;
+  opacity: 1;
+  transform: none;
+}
+
+.site-nav__list a {
+  display: block;
+  padding: var(--space-3) 0;
+  font-size: var(--text-lg);
+  border-bottom: 1px solid rgb(245 241 232 / 0.12);
+}
+
+.site-nav__list a:hover {
+  color: var(--color-copper);
+}
+
+@media (min-width: 768px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .site-nav {
+    position: static;
+    padding: 0;
+    background: none;
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+  }
+
+  .site-nav__list {
+    display: flex;
+    gap: var(--space-8);
+  }
+
+  .site-nav__list a {
+    padding: var(--space-2) 0;
+    font-size: var(--text-base);
+    border-bottom: 2px solid transparent;
+    transition: color var(--transition), border-color var(--transition);
+  }
+
+  .site-nav__list a:hover {
+    border-color: var(--color-copper);
+  }
+}
