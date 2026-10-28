@@ -150,9 +150,7 @@
 
 .form input:focus,
 .form textarea:focus {
-  outline: none;
   border-color: var(--color-olive);
-  box-shadow: 0 0 0 3px rgb(74 81 57 / 0.25);
 }
 
 /* Hatalı alan: js/form.js aria-invalid="true" ekler */
@@ -160,8 +158,8 @@
   border-color: var(--color-error);
 }
 
-.form [aria-invalid="true"]:focus {
-  box-shadow: 0 0 0 3px rgb(166 61 47 / 0.25);
+.form [aria-invalid="true"]:focus-visible {
+  outline-color: var(--color-error);
 }
 
 .form__error {
