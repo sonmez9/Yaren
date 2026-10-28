@@ -50,3 +50,69 @@
   border-color: var(--color-copper);
   color: var(--color-cream);
 }
+
+/* Ürün kartı */
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-cream);
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lifted);
+}
+
+.card__image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .card__image {
+  transform: scale(1.04);
+}
+
+/* Görsel kart sınırında kalsın, taşmasın */
+.card > .card__image {
+  transform-origin: center;
+}
+
+.card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-6);
+}
+
+.card__text {
+  color: var(--color-coffee-soft);
+}
+
+.card__price {
+  margin-top: auto;
+  padding-top: var(--space-2);
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--color-copper);
+}
+
+/* Tablet: görsel solda, metin sağda */
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .card {
+    flex-direction: row;
+  }
+
+  .card__image {
+    width: 42%;
+    aspect-ratio: auto;
+    height: auto;
+  }
+}
