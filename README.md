@@ -2,6 +2,9 @@
 
 > Her fincanda ortak bir hikâye.
 
+- **Canlı site:** https://sonmez9.github.io/Yaren/
+- **Kaynak kod:** https://github.com/sonmez9/Yaren
+
 Yâren, geleneksel Türk kahvesini espresso ve modern demleme kültürüyle birleştiren hayali bir kahve markası. Bu depo, marka için hazırlanmış modern, sıcak ve mobil uyumlu **tek sayfalık web sitesini** içerir.
 
 ## Özellikler
@@ -48,7 +51,8 @@ Telefonda denemek için bilgisayar ve telefon aynı ağdayken sunucuyu başlatı
 │   └── form.js           # form doğrulama
 └── assets/
     ├── images/           # WebP'ye çevrilmiş, boyutlandırılmış fotoğraflar
-    └── favicon.svg
+    ├── favicon.svg
+    └── og-image.jpg      # paylaşım önizleme görseli (1200x630)
 ```
 
 ## Teknik kararlar
@@ -74,5 +78,6 @@ Tüm fotoğraflar [Pexels](https://www.pexels.com) üzerinden, Pexels lisansıyl
 | `turk-kahvesi.webp` | Oben Kural | [Pexels](https://www.pexels.com/tr-tr/fotograf/plaka-tabak-fincan-kupa-17777276/) |
 | `espresso.webp` | Pew Nguyen | [Pexels](https://www.pexels.com/tr-tr/fotograf/ahsap-yuzey-uzerinde-kahve-cekirdekleri-bulunan-estetik-kahve-fincani-36871273/) |
 | `filtre.webp` | Vinícius Vieira ft | [Pexels](https://www.pexels.com/tr-tr/fotograf/kahve-fincan-kupa-su-22608836/) |
+| `og-image.jpg` | Việt Anh Nguyễn | `hero.webp` ile aynı fotoğrafın paylaşım önizlemesi için kırpılmış hâli |
 
 Sitedeki adres, çalışma saatleri ve fiyatlar örnek amaçlıdır.
