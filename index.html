@@ -15,7 +15,178 @@
   <link rel="stylesheet" href="css/components.css">
 </head>
 <body>
-  <!-- İçerik Faz 2'de eklenecek -->
+  <a class="skip-link" href="#icerik">İçeriğe geç</a>
+
+  <header class="site-header" id="top">
+    <div class="container site-header__inner">
+      <a class="logo" href="#top" aria-label="Yâren, sayfanın başına dön">Yâren</a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="visually-hidden">Menüyü aç/kapat</span>
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Ana menü">
+        <ul class="site-nav__list">
+          <li><a href="#hikaye">Hikâyemiz</a></li>
+          <li><a href="#kahveler">Kahveler</a></li>
+          <li><a href="#iletisim">İletişim</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="icerik">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-baslik">
+      <img
+        class="hero__image"
+        src="assets/images/hero.webp"
+        alt="Ahşap masalar ve işlemeli demir sandalyelerle döşeli sıcak bir kafe köşesi"
+        width="1600" height="1064"
+      >
+      <div class="hero__content container">
+        <p class="eyebrow">Türk kahvesi · Espresso · Filtre</p>
+        <h1 id="hero-baslik" class="hero__title">Yâren</h1>
+        <p class="hero__slogan">Her fincanda ortak bir hikâye.</p>
+        <a class="btn" href="#kahveler">Kahveleri Keşfet</a>
+      </div>
+    </section>
+
+    <!-- Hikâyemiz -->
+    <section class="section story" id="hikaye" aria-labelledby="hikaye-baslik">
+      <div class="container story__grid">
+        <figure class="story__figure reveal">
+          <img
+            src="assets/images/hikaye.webp"
+            alt="Barista, espresso makinesinin yanında paslanmaz çelik süt kabını tutuyor"
+            width="900" height="645" loading="lazy"
+          >
+        </figure>
+        <div class="story__text reveal">
+          <p class="eyebrow">Hikâyemiz</p>
+          <h2 id="hikaye-baslik">Eski dostluk, yeni demleme</h2>
+          <p>
+            "Yâren" eski Türkçede dost, sırdaş demek. Bir fincan kahvenin kırk yıl hatırı olduğuna
+            inanan bir kültürden geliyoruz; bu hatırı bugünün demleme tekniklerine taşıyoruz.
+          </p>
+          <p>
+            Cezvede yavaş yavaş pişen Türk kahvesi, tek yönlü espresso ve sabırla süzülen filtre kahve
+            aynı masada buluşuyor. Biz kahveyi sadece sunmuyoruz; sohbetin etrafında toplanan herkesi
+            ortak bir hikâyenin parçası yapıyoruz.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kahveler -->
+    <section class="section section--alt menu" id="kahveler" aria-labelledby="kahveler-baslik">
+      <div class="container">
+        <header class="section__header reveal">
+          <p class="eyebrow">Kahvelerimiz</p>
+          <h2 id="kahveler-baslik">Üç yöntem, tek tutku</h2>
+        </header>
+
+        <ul class="menu__grid">
+          <li class="card reveal">
+            <img
+              class="card__image"
+              src="assets/images/turk-kahvesi.webp"
+              alt="Ahşap masada siyah fincanda köpüklü Türk kahvesi, yanında lokum ve kahve çekirdekleri"
+              width="900" height="600" loading="lazy"
+            >
+            <div class="card__body">
+              <h3 class="card__title">Türk Kahvesi</h3>
+              <p class="card__text">Közde, cezvede ağır ağır pişen geleneksel lezzet. Yoğun, köpüklü ve lokumla birlikte.</p>
+              <p class="card__price"><span class="visually-hidden">Fiyat: </span>85 ₺</p>
+            </div>
+          </li>
+
+          <li class="card reveal">
+            <img
+              class="card__image"
+              src="assets/images/espresso.webp"
+              alt="Ahşap yüzeyde kremalı espresso fincanı ve kahve çekirdekleri"
+              width="900" height="507" loading="lazy"
+            >
+            <div class="card__body">
+              <h3 class="card__title">Espresso</h3>
+              <p class="card__text">Taze çekilmiş çekirdekten, yoğun kremalı ve dengeli bir shot. Kısa, güçlü ve net.</p>
+              <p class="card__price"><span class="visually-hidden">Fiyat: </span>75 ₺</p>
+            </div>
+          </li>
+
+          <li class="card reveal">
+            <img
+              class="card__image"
+              src="assets/images/filtre.webp"
+              alt="Filtre kahve demlenirken sürahiye süzülüyor, yanında boş porselen fincan"
+              width="900" height="601" loading="lazy"
+            >
+            <div class="card__body">
+              <h3 class="card__title">Filtre Kahve</h3>
+              <p class="card__text">Elle dökülen sıcak suyla yavaş demlenen, hafif gövdeli ve meyvemsi notalı fincan.</p>
+              <p class="card__price"><span class="visually-hidden">Fiyat: </span>95 ₺</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- İletişim -->
+    <section class="section contact" id="iletisim" aria-labelledby="iletisim-baslik">
+      <div class="container contact__grid">
+        <div class="contact__intro reveal">
+          <p class="eyebrow">İletişim</p>
+          <h2 id="iletisim-baslik">Bize bir not bırakın</h2>
+          <p>Önerileriniz, toplu sipariş talepleriniz ya da sadece merhaba demek için yazabilirsiniz.</p>
+        </div>
+
+        <form class="form reveal" id="contact-form" novalidate>
+          <div class="form__field">
+            <label for="name">Ad</label>
+            <input type="text" id="name" name="name" autocomplete="name" aria-describedby="name-error">
+            <p class="form__error" id="name-error" role="alert"></p>
+          </div>
+
+          <div class="form__field">
+            <label for="email">E-posta</label>
+            <input type="email" id="email" name="email" autocomplete="email" aria-describedby="email-error">
+            <p class="form__error" id="email-error" role="alert"></p>
+          </div>
+
+          <div class="form__field">
+            <label for="message">Mesaj</label>
+            <textarea id="message" name="message" rows="5" aria-describedby="message-error"></textarea>
+            <p class="form__error" id="message-error" role="alert"></p>
+          </div>
+
+          <button class="btn" type="submit">Gönder</button>
+          <p class="form__success" id="form-success" role="status" hidden></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div>
+        <p class="logo">Yâren</p>
+        <p class="site-footer__slogan">Her fincanda ortak bir hikâye.</p>
+      </div>
+
+      <address class="site-footer__info">
+        Örnek Sokak No: 12, Kadıköy / İstanbul<br>
+        Her gün 08.00 – 22.00
+      </address>
+
+      <ul class="site-footer__social" aria-label="Sosyal medya">
+        <li><a href="#" aria-label="Instagram">Instagram</a></li>
+        <li><a href="#" aria-label="X (Twitter)">X</a></li>
+      </ul>
+    </div>
+    <p class="site-footer__copy container">© 2026 Yâren. Tüm hakları saklıdır.</p>
+  </footer>
 
   <script src="js/main.js" defer></script>
   <script src="js/form.js" defer></script>
