@@ -76,6 +76,9 @@
 }
 
 .logo {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem; /* dokunma hedefi en az 44px */
   font-family: var(--font-heading);
   font-size: var(--text-xl);
   font-weight: 500;

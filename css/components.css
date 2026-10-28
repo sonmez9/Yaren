@@ -198,10 +198,16 @@
   opacity: 0;
   translate: 0 1.5rem; /* transform'dan bağımsız: kart hover efektiyle çakışmaz */
   transition:
-    opacity 0.7s ease,
-    translate 0.7s ease,
+    opacity 0.7s ease var(--reveal-delay, 0s),
+    translate 0.7s ease var(--reveal-delay, 0s),
     transform var(--transition),
     box-shadow var(--transition);
+}
+
+/* Masaüstünde kartlar yan yana belirdiği için sırayla gelsin */
+@media (min-width: 1024px) {
+  .menu__grid .card:nth-child(2) { --reveal-delay: 0.12s; }
+  .menu__grid .card:nth-child(3) { --reveal-delay: 0.24s; }
 }
 
 .js .reveal.is-visible {
