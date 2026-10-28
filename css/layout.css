@@ -15,7 +15,7 @@
 }
 
 .section--alt {
-  background-color: var(--color-cream-dark);
+  background-color: var(--color-sage);
 }
 
 .section__header {
@@ -47,7 +47,7 @@
 
 /* --------------------------------------------------------------------------
    Header ve navigasyon
-   Koyu yarı saydam zemin hem hero fotoğrafı hem krem bölümler üstünde okunur.
+   Zeytin yeşili yarı saydam zemin hem hero fotoğrafı hem krem bölümler üstünde okunur.
    -------------------------------------------------------------------------- */
 
 .site-header {
@@ -55,7 +55,7 @@
   inset: 0 0 auto;
   z-index: 100;
   height: var(--header-height);
-  background-color: rgb(59 42 32 / 0.85);
+  background-color: rgb(74 81 57 / 0.88);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   color: var(--color-cream);
@@ -64,7 +64,7 @@
 
 /* js/main.js sayfa kayınca bu sınıfı ekler */
 .site-header.is-scrolled {
-  background-color: rgb(59 42 32 / 0.97);
+  background-color: rgb(58 64 45 / 0.97);
   box-shadow: var(--shadow-soft);
 }
 
@@ -123,7 +123,7 @@
   left: 0;
   right: 0;
   padding: var(--space-4) var(--container-pad) var(--space-8);
-  background-color: rgb(59 42 32 / 0.97);
+  background-color: rgb(58 64 45 / 0.98);
   visibility: hidden;
   opacity: 0;
   transform: translateY(-0.5rem);
@@ -201,7 +201,7 @@
   object-fit: cover;
 }
 
-/* Yazı okunurluğu için fotoğrafın üstüne koyu kahve degrade */
+/* Yazı okunurluğu için fotoğrafın üstüne zeytin yeşili degrade */
 .hero::after {
   content: "";
   position: absolute;
@@ -209,9 +209,9 @@
   z-index: -1;
   background: linear-gradient(
     to bottom,
-    rgb(59 42 32 / 0.55) 0%,
-    rgb(59 42 32 / 0.7) 60%,
-    rgb(59 42 32 / 0.9) 100%
+    rgb(74 81 57 / 0.4) 0%,
+    rgb(58 64 45 / 0.55) 55%,
+    rgb(58 64 45 / 0.78) 100%
   );
 }
 
@@ -221,6 +221,7 @@
   align-items: flex-start;
   gap: var(--space-4);
   padding-block: var(--space-16);
+  text-shadow: 0 1px 12px rgb(30 34 22 / 0.55); /* fotoğrafın açık bölgelerinde okunurluk */
 }
 
 .hero__title {
@@ -323,7 +324,7 @@
 
 .site-footer {
   padding-block: var(--space-12) var(--space-6);
-  background-color: var(--color-coffee);
+  background-color: var(--color-olive-dark);
   color: var(--color-cream);
 }
 

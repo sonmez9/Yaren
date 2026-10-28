@@ -213,7 +213,14 @@
   translate: 0 0;
 }
 
-/* Hero'nun koyu zemininde küçük başlık daha açık bir bakır tonu alır */
+/* Hero'da küçük başlık fotoğraf üstünde okunsun diye krem renkli */
 .hero .eyebrow {
-  color: var(--color-copper-light);
+  color: var(--color-cream);
+}
+
+@media (max-width: 767.98px) {
+  .hero .eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em; /* 360px'te tek satıra sığsın */
+  }
 }
