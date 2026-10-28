@@ -40,6 +40,7 @@
 
 /* Hero üzerinde buton açık renkli olur */
 .hero .btn {
+  text-shadow: none; /* hero metninin gölgesi butonun yazısını bulanıklaştırmasın */
   background-color: var(--color-cream);
   border-color: var(--color-cream);
   color: var(--color-coffee);
@@ -57,7 +58,7 @@
   flex-direction: column;
   overflow: hidden;
   border-radius: var(--radius-lg);
-  background-color: var(--color-cream);
+  background-color: var(--color-paper);
   box-shadow: var(--shadow-soft);
   transition: transform var(--transition), box-shadow var(--transition);
 }
@@ -119,7 +120,8 @@
   gap: var(--space-6);
   padding: var(--space-8);
   border-radius: var(--radius-lg);
-  background-color: var(--color-cream-dark);
+  background-color: var(--color-paper);
+  box-shadow: var(--shadow-soft);
 }
 
 .form__field {
@@ -139,7 +141,7 @@
   padding: var(--space-3) var(--space-4);
   border: 2px solid rgb(59 42 32 / 0.2);
   border-radius: var(--radius-md);
-  background-color: var(--color-cream);
+  background-color: #fff;
   transition: border-color var(--transition), box-shadow var(--transition);
 }
 

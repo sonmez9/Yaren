@@ -81,7 +81,8 @@ button {
   outline-offset: 3px;
 }
 
-/* Koyu zeminlerde (hero, footer) açık bakır halka */
+/* Koyu zeminlerde (header, hero, footer) açık bakır halka */
+.site-header :focus-visible,
 .hero :focus-visible,
 .site-footer :focus-visible {
   outline-color: var(--color-copper-light);

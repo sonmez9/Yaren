@@ -10,7 +10,7 @@ Tüm fotoğraflar [Pexels](https://www.pexels.com) üzerinden, Pexels lisansıyl
 
 | Dosya | Fotoğrafçı | Kaynak |
 |---|---|---|
-| `hero.webp` | Ivett M | [Pexels](https://www.pexels.com/tr-tr/fotograf/zarif-ahsap-ve-demir-bistro-kafe-ortami-37041313/) |
+| `hero.webp` | Việt Anh Nguyễn | [Pexels](https://www.pexels.com/tr-tr/fotograf/dogal-isik-ve-bitkilerle-rahat-kafe-ic-mekani-31133774/) |
 | `hikaye.webp` | Meryemce | [Pexels](https://www.pexels.com/tr-tr/fotograf/kol-silah-insanlar-kafein-22033532/) |
 | `turk-kahvesi.webp` | Oben Kural | [Pexels](https://www.pexels.com/tr-tr/fotograf/plaka-tabak-fincan-kupa-17777276/) |
 | `espresso.webp` | Pew Nguyen | [Pexels](https://www.pexels.com/tr-tr/fotograf/ahsap-yuzey-uzerinde-kahve-cekirdekleri-bulunan-estetik-kahve-fincani-36871273/) |

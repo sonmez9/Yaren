@@ -47,7 +47,7 @@
 
 /* --------------------------------------------------------------------------
    Header ve navigasyon
-   Yarı saydam krem zemin, hem hero fotoğrafı hem krem bölümler üstünde okunur.
+   Zeytin yeşili yarı saydam zemin, hem hero fotoğrafı hem açık bölümler üstünde okunur.
    -------------------------------------------------------------------------- */
 
 .site-header {
@@ -55,17 +55,16 @@
   inset: 0 0 auto;
   z-index: 100;
   height: var(--header-height);
-  background-color: rgb(245 241 232 / 0.9);
+  background-color: rgb(74 81 57 / 0.94);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgb(59 42 32 / 0.08);
-  color: var(--color-coffee);
+  color: var(--color-cream);
   transition: background-color var(--transition), box-shadow var(--transition);
 }
 
 /* js/main.js sayfa kayınca bu sınıfı ekler */
 .site-header.is-scrolled {
-  background-color: rgb(245 241 232 / 0.97);
+  background-color: rgb(68 75 52 / 0.98);
   box-shadow: var(--shadow-soft);
 }
 
@@ -124,8 +123,7 @@
   left: 0;
   right: 0;
   padding: var(--space-4) var(--container-pad) var(--space-8);
-  background-color: var(--color-cream);
-  border-bottom: 1px solid rgb(59 42 32 / 0.08);
+  background-color: rgb(68 75 52 / 0.98);
   visibility: hidden;
   opacity: 0;
   transform: translateY(-0.5rem);
@@ -142,11 +140,11 @@
   display: block;
   padding: var(--space-3) 0;
   font-size: var(--text-lg);
-  border-bottom: 1px solid rgb(59 42 32 / 0.1);
+  border-bottom: 1px solid rgb(244 236 220 / 0.14);
 }
 
 .site-nav__list a:hover {
-  color: var(--color-copper-text);
+  color: var(--color-copper-light);
 }
 
 @media (min-width: 768px) {
@@ -176,7 +174,7 @@
   }
 
   .site-nav__list a:hover {
-    border-color: var(--color-copper);
+    border-color: var(--color-copper-light);
   }
 }
 
@@ -203,18 +201,21 @@
   object-fit: cover;
 }
 
-/* Yazı okunurluğu için fotoğrafın üstüne hafif, sıcak kahve tonlu degrade */
+/* Yazı okunurluğu için fotoğrafın üstüne hafif, sıcak kahve tonlu degrade.
+   Ortadaki yumuşak halka sadece yazının arkasını koyulaştırır, fotoğraf kenarlarda aydınlık kalır. */
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(
-    to bottom,
-    rgb(59 42 32 / 0.3) 0%,
-    rgb(59 42 32 / 0.48) 55%,
-    rgb(59 42 32 / 0.68) 100%
-  );
+  background:
+    radial-gradient(ellipse 55% 45% at 50% 52%, rgb(40 29 22 / 0.5) 0%, rgb(40 29 22 / 0) 100%),
+    linear-gradient(
+      to bottom,
+      rgb(59 42 32 / 0.35) 0%,
+      rgb(59 42 32 / 0.5) 55%,
+      rgb(59 42 32 / 0.7) 100%
+    );
 }
 
 .hero__content {
@@ -223,7 +224,7 @@
   align-items: flex-start;
   gap: var(--space-4);
   padding-block: var(--space-16);
-  text-shadow: 0 1px 12px rgb(30 34 22 / 0.55); /* fotoğrafın açık bölgelerinde okunurluk */
+  text-shadow: 0 1px 12px rgb(30 22 16 / 0.6); /* fotoğrafın açık bölgelerinde okunurluk */
 }
 
 .hero__title {
@@ -301,6 +302,10 @@
 /* --------------------------------------------------------------------------
    İletişim
    -------------------------------------------------------------------------- */
+
+.contact {
+  background-color: var(--color-sage);
+}
 
 .contact__grid {
   display: grid;
