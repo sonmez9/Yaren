@@ -1,0 +1,60 @@
+/* ==========================================================================
+   Tasarım tokenları: tüm renk, font ve boşluk değerleri burada tanımlanır.
+   Diğer CSS dosyaları sabit değer yerine bu değişkenleri kullanır.
+
+   Kırılım noktaları (media query içinde değişken kullanılamadığı için not):
+     tablet  → 768px
+     masaüstü → 1024px
+     geniş   → 1440px
+   ========================================================================== */
+
+:root {
+  /* Renkler */
+  --color-cream: #f5f1e8;        /* kırık beyaz: ana arka plan */
+  --color-cream-dark: #ebe4d4;   /* alternatif bölüm arka planı */
+  --color-coffee: #3b2a20;       /* koyu kahve: metin, koyu bölümler */
+  --color-coffee-soft: #6b5a4e;  /* ikincil metin */
+  --color-olive: #4a5139;        /* zeytin yeşili: vurgu, buton */
+  --color-olive-dark: #3a402d;   /* buton hover */
+  --color-copper: #b08a5a;       /* bakır: fiyat, ince detaylar */
+  --color-error: #a63d2f;        /* form hata mesajı */
+  --color-success: #4a5139;      /* form başarı mesajı */
+
+  /* Fontlar */
+  --font-heading: "Fraunces", Georgia, serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Yazı boyutları: ekrana göre akıcı ölçeklenir */
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: clamp(1.375rem, 1.2rem + 0.8vw, 1.75rem);
+  --text-2xl: clamp(1.75rem, 1.4rem + 1.6vw, 2.5rem);
+  --text-3xl: clamp(2.25rem, 1.6rem + 3vw, 3.75rem);
+  --text-hero: clamp(3.5rem, 2.2rem + 7vw, 7rem);
+
+  /* Boşluk ölçeği */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+
+  /* Düzen */
+  --container-max: 72rem;
+  --container-pad: var(--space-6);
+  --header-height: 4.5rem;
+  --section-pad: clamp(var(--space-16), 10vw, var(--space-24));
+
+  /* Köşe, gölge, geçiş */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.25rem;
+  --shadow-soft: 0 4px 16px rgb(59 42 32 / 0.08);
+  --shadow-lifted: 0 12px 32px rgb(59 42 32 / 0.16);
+  --transition: 0.25s ease;
+}
