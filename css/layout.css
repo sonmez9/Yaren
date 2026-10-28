@@ -234,3 +234,40 @@
     text-align: center;
   }
 }
+
+/* --------------------------------------------------------------------------
+   Hikâyemiz: mobilde alt alta, tablette yan yana
+   -------------------------------------------------------------------------- */
+
+.story__grid {
+  display: grid;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.story__figure img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lifted);
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  /* Fotoğraf serin tonlu; palete yaklaştırmak için hafif sıcak filtre */
+  filter: sepia(0.25) saturate(1.05);
+}
+
+.story__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.story__text h2 {
+  margin-bottom: var(--space-2);
+}
+
+@media (min-width: 768px) {
+  .story__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+  }
+}
