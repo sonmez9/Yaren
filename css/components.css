@@ -8,7 +8,7 @@
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--color-copper);
+  color: var(--color-copper-text);
 }
 
 /* Buton */
@@ -96,7 +96,7 @@
   font-family: var(--font-heading);
   font-size: var(--text-xl);
   font-weight: 600;
-  color: var(--color-copper);
+  color: var(--color-copper-text);
 }
 
 /* Tablet: görsel solda, metin sağda */
@@ -217,5 +217,5 @@
 
 /* Hero'nun koyu zemininde küçük başlık daha açık bir bakır tonu alır */
 .hero .eyebrow {
-  color: #d9b98a;
+  color: var(--color-copper-light);
 }

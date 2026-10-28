@@ -338,7 +338,7 @@
   margin-top: var(--space-2);
   font-family: var(--font-heading);
   font-style: italic;
-  color: var(--color-copper);
+  color: var(--color-copper-light);
 }
 
 .site-footer__info {

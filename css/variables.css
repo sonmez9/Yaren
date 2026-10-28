@@ -16,7 +16,9 @@
   --color-coffee-soft: #6b5a4e;  /* ikincil metin */
   --color-olive: #4a5139;        /* zeytin yeşili: vurgu, buton */
   --color-olive-dark: #3a402d;   /* buton hover */
-  --color-copper: #b08a5a;       /* bakır: fiyat, ince detaylar */
+  --color-copper: #b08a5a;       /* bakır: süs ve koyu zemin üstü detaylar */
+  --color-copper-text: #7d5a2e;  /* açık zemin üstünde metin için bakır (AA kontrast) */
+  --color-copper-light: #d9b98a; /* koyu zemin üstünde metin için bakır (AA kontrast) */
   --color-error: #a63d2f;        /* form hata mesajı */
   --color-success: #4a5139;      /* form başarı mesajı */
 
