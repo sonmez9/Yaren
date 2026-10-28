@@ -196,11 +196,15 @@
    görünür olan öğelere "is-visible" verir. JS çalışmazsa içerik gizli kalmaz. */
 .js .reveal {
   opacity: 0;
-  transform: translateY(1.5rem);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  translate: 0 1.5rem; /* transform'dan bağımsız: kart hover efektiyle çakışmaz */
+  transition:
+    opacity 0.7s ease,
+    translate 0.7s ease,
+    transform var(--transition),
+    box-shadow var(--transition);
 }
 
 .js .reveal.is-visible {
   opacity: 1;
-  transform: none;
+  translate: 0 0;
 }
