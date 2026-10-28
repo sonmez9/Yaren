@@ -303,10 +303,6 @@
    İletişim
    -------------------------------------------------------------------------- */
 
-.contact {
-  background-color: var(--color-sage);
-}
-
 .contact__grid {
   display: grid;
   gap: var(--space-8);
