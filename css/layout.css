@@ -23,6 +23,11 @@
   text-align: center;
 }
 
+/* p'lerin 65ch sınırı kutuyu sola yaslar; ortalı başlıkta ortala */
+.section__header p {
+  margin-inline: auto;
+}
+
 /* "İçeriğe geç" linki: sadece klavye odağı aldığında görünür */
 .skip-link {
   position: absolute;
@@ -361,7 +366,7 @@
 
 .site-footer__copy {
   margin-top: var(--space-6);
-  max-width: none;
+  max-width: var(--container-max);
   font-size: var(--text-sm);
   color: rgb(245 241 232 / 0.6);
 }

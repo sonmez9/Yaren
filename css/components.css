@@ -208,3 +208,8 @@
   opacity: 1;
   translate: 0 0;
 }
+
+/* Hero'nun koyu zemininde küçük başlık daha açık bir bakır tonu alır */
+.hero .eyebrow {
+  color: #d9b98a;
+}
