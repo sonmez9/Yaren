@@ -1,0 +1,52 @@
+/* ==========================================================================
+   Bileşenler: buton, küçük başlık, kart, form, kaydırma animasyonu
+   ========================================================================== */
+
+/* Küçük üst başlık (eyebrow) */
+.eyebrow {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-copper);
+}
+
+/* Buton */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: var(--space-3) var(--space-8);
+  border: 2px solid var(--color-olive);
+  border-radius: 999px;
+  background-color: var(--color-olive);
+  color: var(--color-cream);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: background-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.btn:hover {
+  background-color: var(--color-olive-dark);
+  border-color: var(--color-olive-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lifted);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Hero üzerinde buton açık renkli olur */
+.hero .btn {
+  background-color: var(--color-cream);
+  border-color: var(--color-cream);
+  color: var(--color-coffee);
+}
+
+.hero .btn:hover {
+  background-color: var(--color-copper);
+  border-color: var(--color-copper);
+  color: var(--color-cream);
+}
