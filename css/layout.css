@@ -286,3 +286,25 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* --------------------------------------------------------------------------
+   İletişim
+   -------------------------------------------------------------------------- */
+
+.contact__grid {
+  display: grid;
+  gap: var(--space-8);
+}
+
+.contact__intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .contact__grid {
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--space-16);
+  }
+}
