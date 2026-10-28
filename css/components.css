@@ -191,3 +191,16 @@
     padding: var(--space-12);
   }
 }
+
+/* Kaydırma animasyonu: js/main.js <html> öğesine "js" sınıfını ekler ve
+   görünür olan öğelere "is-visible" verir. JS çalışmazsa içerik gizli kalmaz. */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(1.5rem);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.js .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
